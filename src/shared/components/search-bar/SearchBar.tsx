@@ -1,11 +1,14 @@
 import { Search as SearchIcon } from '@mui/icons-material';
 import { IconButton, InputBase, Paper } from '@mui/material';
 import { ChangeEvent, KeyboardEvent, useState } from 'react';
-import FoafRepository from '../../../repository/FoafRepository.ts';
+import { useAppDispatch } from '../../../redux/hooks';
+import { profileFetched } from '../../../redux/profile/profileSlice';
+import FoafRepository from '../../../repository/FoafRepository';
 import './search-bar.scss';
 
 function SearchBar() {
   const [inputValue, setInputValue] = useState<string>('');
+  const dispatch = useAppDispatch();
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>): void => {
     setInputValue(event.target.value);
@@ -27,7 +30,7 @@ function SearchBar() {
 
   const fetchProfileInfo = (foafUrl: string): void => {
     FoafRepository.getProfileInfo(foafUrl).then(res => {
-      console.log('profile info:', res.data);
+      dispatch(profileFetched(res.data));
     }).catch(err => {
       console.log('error fetching profile info', err);
     });
