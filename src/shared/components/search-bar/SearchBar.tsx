@@ -1,6 +1,7 @@
 import { Search as SearchIcon } from '@mui/icons-material';
 import { IconButton, InputBase, Paper } from '@mui/material';
 import { ChangeEvent, KeyboardEvent, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useAppDispatch } from '../../../redux/hooks';
 import { profileFetched } from '../../../redux/profile/profileSlice';
 import FoafRepository from '../../../repository/FoafRepository';
@@ -9,6 +10,7 @@ import './search-bar.scss';
 function SearchBar() {
   const [inputValue, setInputValue] = useState<string>('');
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>): void => {
     setInputValue(event.target.value);
@@ -18,6 +20,7 @@ function SearchBar() {
     const trimmedInputValue: string = inputValue.trim();
     if (trimmedInputValue !== '') {
       fetchProfileInfo(trimmedInputValue);
+      navigate('/profile')
     }
   };
 
