@@ -4,12 +4,13 @@ import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 import './card-slider.scss';
+import SlideCard from '../../../main/components/slide-card/SlideCard.tsx';
 
 function CardSlider() {
   return (
     <Swiper
-      slidesPerView={3}
-      spaceBetween={32}
+      slidesPerView={4}
+      spaceBetween={16}
       loop={true}
       pagination={{
         clickable: true
@@ -18,15 +19,15 @@ function CardSlider() {
       modules={[Pagination, Navigation]}
       className='card-slider'
     >
-      <SwiperSlide>Slide 1</SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
-      <SwiperSlide>Slide 5</SwiperSlide>
-      <SwiperSlide>Slide 6</SwiperSlide>
-      <SwiperSlide>Slide 7</SwiperSlide>
-      <SwiperSlide>Slide 8</SwiperSlide>
-      <SwiperSlide>Slide 9</SwiperSlide>
+      <SwiperSlide><SlideCard/></SwiperSlide>
+      <SwiperSlide><SlideCard/></SwiperSlide>
+      <SwiperSlide><SlideCard/></SwiperSlide>
+      <SwiperSlide><SlideCard/></SwiperSlide>
+      <SwiperSlide><SlideCard/></SwiperSlide>
+      <SwiperSlide><SlideCard/></SwiperSlide>
+      <SwiperSlide><SlideCard/></SwiperSlide>
+      <SwiperSlide><SlideCard/></SwiperSlide>
+      <SwiperSlide><SlideCard/></SwiperSlide>
     </Swiper>
   );
 }
