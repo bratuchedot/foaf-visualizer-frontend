@@ -1,5 +1,5 @@
 export interface Friend {
   name: string,
-  surname: string,
-  foafLink: string
+  email: string,
+  seeAlso: string
 }
