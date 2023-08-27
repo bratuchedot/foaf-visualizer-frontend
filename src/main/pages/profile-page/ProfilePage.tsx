@@ -15,7 +15,7 @@ function ProfilePage() {
       <ProfileCard data={profileData}/>
       <br/>
       <Container>
-        <CardSlider/>
+        <CardSlider data={profileData?.peopleYouKnow}/>
       </Container>
     </>
   );

@@ -5,11 +5,20 @@ import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 import './card-slider.scss';
 import SlideCard from '../../../main/components/slide-card/SlideCard.tsx';
+import { Friend } from '../../interfaces/Friend.ts';
 
-function CardSlider() {
+function CardSlider({ data }: { data: Friend[] | undefined }) {
   return (
     <Swiper
-      slidesPerView={4}
+      slidesPerView={2}
+      breakpoints={{
+        675: {
+          slidesPerView: 3
+        },
+        900: {
+          slidesPerView: 4
+        }
+      }}
       spaceBetween={16}
       loop={true}
       pagination={{
@@ -19,15 +28,9 @@ function CardSlider() {
       modules={[Pagination, Navigation]}
       className='card-slider'
     >
-      <SwiperSlide><SlideCard/></SwiperSlide>
-      <SwiperSlide><SlideCard/></SwiperSlide>
-      <SwiperSlide><SlideCard/></SwiperSlide>
-      <SwiperSlide><SlideCard/></SwiperSlide>
-      <SwiperSlide><SlideCard/></SwiperSlide>
-      <SwiperSlide><SlideCard/></SwiperSlide>
-      <SwiperSlide><SlideCard/></SwiperSlide>
-      <SwiperSlide><SlideCard/></SwiperSlide>
-      <SwiperSlide><SlideCard/></SwiperSlide>
+      {data?.map((friend, index) => (
+        <SwiperSlide key={index}><SlideCard data={friend}/></SwiperSlide>
+      ))}
     </Swiper>
   );
 }
