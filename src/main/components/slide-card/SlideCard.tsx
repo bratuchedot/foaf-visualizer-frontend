@@ -1,6 +1,7 @@
 import { Avatar, Button, Card, CardContent, Typography } from '@mui/material';
 import { useAppDispatch } from '../../../redux/hooks.ts';
 import { profileFetched } from '../../../redux/profile/profileSlice.ts';
+import { showErrorMessage } from '../../../redux/snackbar/snackbarSlice.ts';
 import FoafRepository from '../../../repository/FoafRepository.ts';
 import { Friend } from '../../../shared/interfaces/Friend.ts';
 import './slide-card.scss';
@@ -20,8 +21,8 @@ function SlideCard({ data }: { data: Friend | undefined }) {
     console.log('seeAlso', data.seeAlso);
     FoafRepository.getProfileInfo(data?.seeAlso).then(res => {
       dispatch(profileFetched(res.data));
-    }).catch(err => {
-      console.log('error fetching profile info', err);
+    }).catch(() => {
+      dispatch(showErrorMessage('Cannot view this profile'))
     });
   };
 

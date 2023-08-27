@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AboutPage from './main/pages/about-page/AboutPage.tsx';
 import HomePage from './main/pages/home-page/HomePage.tsx';
 import ProfilePage from './main/pages/profile-page/ProfilePage.tsx';
+import CustomSnackbar from './shared/components/snackbar/CustomSnackbar.tsx';
 
 const theme = createTheme({
   palette: {
@@ -27,7 +28,9 @@ function App() {
             <Route path='/' element={<HomePage/>}/>
             <Route path='/profile' element={<ProfilePage/>}/>
             <Route path='/about' element={<AboutPage/>}/>
-          </Routes></BrowserRouter>
+          </Routes>
+        </BrowserRouter>
+        <CustomSnackbar/>
       </ThemeProvider>
     </>
   );

@@ -4,6 +4,7 @@ import { ChangeEvent, KeyboardEvent, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAppDispatch } from '../../../redux/hooks';
 import { profileFetched } from '../../../redux/profile/profileSlice';
+import { showErrorMessage } from '../../../redux/snackbar/snackbarSlice.ts';
 import FoafRepository from '../../../repository/FoafRepository';
 import './search-bar.scss';
 
@@ -35,7 +36,7 @@ function SearchBar() {
     FoafRepository.getProfileInfo(foafUrl).then(res => {
       dispatch(profileFetched(res.data));
     }).catch(err => {
-      console.log('error fetching profile info', err);
+      dispatch(showErrorMessage(err.response.data.message))
     });
   };
 
