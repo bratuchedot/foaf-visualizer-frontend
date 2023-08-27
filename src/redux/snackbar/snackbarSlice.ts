@@ -41,7 +41,7 @@ const snackbarSlice = createSlice({
         ...action.payload
       };
     },
-    hideMessage: (state, action) => {
+    hideMessage: (state, _action) => {
       state.state = false;
     },
     showInfoMessage: (state, action) => {

@@ -61,7 +61,7 @@ function AboutPage() {
             </Typography>
             <Typography variant='h4' className='heading'>Created for learning and exploration</Typography>
             <Typography variant='body1' className='text'>
-              FOAF Visualizer was created as a project assignment for the "Web-Based Systems" course at the Faculty of
+              FOAF Visualizer is created as a project assignment for the "Web-Based Systems" course at the Faculty of
               Computer Science and Engineering (FCSE) in Skopje.
             </Typography>
           </Paper>
