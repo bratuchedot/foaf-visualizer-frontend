@@ -40,20 +40,22 @@ function SearchBar() {
   };
 
   return (
-    <Tooltip title='Enter a valid FOAF turtle file URL' placement="bottom-start" disableHoverListener>
-      <Paper component='form' className='search-bar-container'>
-        <InputBase
-          className='search-input'
-          placeholder='Search...'
-          value={inputValue}
-          onChange={handleInputChange}
-          onKeyDown={handleEnterPress}
-        />
-        <IconButton type='button' className='search-button' onClick={handleSearch}>
-          <SearchIcon/>
-        </IconButton>
-      </Paper>
-    </Tooltip>
+    <section>
+      <Tooltip title='Enter a valid FOAF turtle file URL' placement="bottom-start" disableHoverListener>
+        <Paper component='form' className='search-bar-container'>
+          <InputBase
+            className='search-input'
+            placeholder='Search...'
+            value={inputValue}
+            onChange={handleInputChange}
+            onKeyDown={handleEnterPress}
+          />
+          <IconButton type='button' className='search-button' onClick={handleSearch}>
+            <SearchIcon/>
+          </IconButton>
+        </Paper>
+      </Tooltip>
+    </section>
   );
 }
 

@@ -19,8 +19,7 @@ function ProfileCard({ data }: { data: Foaf | null }) {
   };
 
   return (
-    <>
-      <br/>
+    <section>
       <Paper className='container'>
         <Grid container spacing={2}>
           <Grid item xs={12} md={4}>
@@ -99,7 +98,7 @@ function ProfileCard({ data }: { data: Foaf | null }) {
           </Grid>
         </Grid>
       </Paper>
-    </>
+    </section>
   );
 }
 

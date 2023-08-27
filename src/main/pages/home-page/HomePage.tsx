@@ -10,7 +10,7 @@ function HomePage() {
     <>
       <Header/>
       <main className='main-container'>
-        <Container className='content-container'>
+        <Container className='content-container' maxWidth='md'>
           <Typography variant='h1' color='primary' className='foaf'>FOAF Visualizer</Typography>
           <SearchBar/>
         </Container>

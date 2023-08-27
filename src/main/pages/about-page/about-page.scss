@@ -1,0 +1,18 @@
+.about-container {
+  padding: 2rem;
+}
+
+.heading {
+  &:first-child {
+    margin-top: 0 !important;
+  }
+  margin-top: 2rem !important;
+}
+
+.text {
+  margin-top: 1rem !important;
+}
+
+.back-button {
+  margin: 1rem 0 !important;
+}
