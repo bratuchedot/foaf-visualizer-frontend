@@ -7,9 +7,11 @@ import { profileFetched } from '../../../redux/profile/profileSlice';
 import { showErrorMessage } from '../../../redux/snackbar/snackbarSlice.ts';
 import FoafRepository from '../../../repository/FoafRepository';
 import './search-bar.scss';
+import Loader from '../loader/Loader.tsx';
 
 function SearchBar() {
   const [inputValue, setInputValue] = useState<string>('');
+  const [loading, setLoading] = useState<boolean>(false);
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
@@ -21,7 +23,6 @@ function SearchBar() {
     const trimmedInputValue: string = inputValue.trim();
     if (trimmedInputValue !== '') {
       fetchProfileInfo(trimmedInputValue);
-      navigate('/profile')
     }
   };
 
@@ -33,10 +34,14 @@ function SearchBar() {
   };
 
   const fetchProfileInfo = (foafUrl: string): void => {
+    setLoading(true);
     FoafRepository.getProfileInfo(foafUrl).then(res => {
       dispatch(profileFetched(res.data));
+      navigate('/profile');
     }).catch(err => {
       dispatch(showErrorMessage(err.response.data.message))
+    }).finally(() => {
+      setLoading(false);
     });
   };
 
@@ -56,6 +61,7 @@ function SearchBar() {
           </IconButton>
         </Paper>
       </Tooltip>
+      <Loader isLoading={loading}/>
     </section>
   );
 }

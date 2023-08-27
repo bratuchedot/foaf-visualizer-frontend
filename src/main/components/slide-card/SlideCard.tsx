@@ -18,11 +18,10 @@ function SlideCard({ data }: { data: Friend | undefined }) {
 
   const handleClick = () => {
     if (!data?.seeAlso) return;
-    console.log('seeAlso', data.seeAlso);
     FoafRepository.getProfileInfo(data?.seeAlso).then(res => {
       dispatch(profileFetched(res.data));
     }).catch(() => {
-      dispatch(showErrorMessage('Cannot view this profile'))
+      dispatch(showErrorMessage('Cannot view this profile'));
     });
   };
 
