@@ -4,8 +4,8 @@ import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 import './card-slider.scss';
-import SlideCard from '../../../main/components/slide-card/SlideCard.tsx';
-import { Friend } from '../../interfaces/Friend.ts';
+import SlideCard from '../slide-card/SlideCard.tsx';
+import { Friend } from '../../../shared/interfaces/Friend.ts';
 
 function CardSlider({ data }: { data: Friend[] | undefined }) {
   return (

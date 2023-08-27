@@ -1,11 +1,21 @@
+import { Container, Typography } from '@mui/material';
+import Footer from '../../../shared/components/footer/Footer.tsx';
+import Header from '../../../shared/components/header/Header.tsx';
 import SearchBar from '../../../shared/components/search-bar/SearchBar.tsx';
+import './home-page.scss';
 
 function HomePage() {
 
   return (
     <>
-      <h1>Home Page</h1>
-      <SearchBar/>
+      <Header/>
+      <main className='main-container'>
+        <Container className='content-container'>
+          <Typography variant='h1' color='primary' className='foaf'>FOAF Visualizer</Typography>
+          <SearchBar/>
+        </Container>
+      </main>
+      <Footer/>
     </>
   );
 }

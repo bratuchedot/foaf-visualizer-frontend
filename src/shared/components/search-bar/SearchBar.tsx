@@ -1,5 +1,5 @@
 import { Search as SearchIcon } from '@mui/icons-material';
-import { IconButton, InputBase, Paper } from '@mui/material';
+import { IconButton, InputBase, Paper, Tooltip } from '@mui/material';
 import { ChangeEvent, KeyboardEvent, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAppDispatch } from '../../../redux/hooks';
@@ -40,18 +40,20 @@ function SearchBar() {
   };
 
   return (
-    <Paper component='form' className='search-bar-container'>
-      <InputBase
-        className='search-input'
-        placeholder='Search...'
-        value={inputValue}
-        onChange={handleInputChange}
-        onKeyDown={handleEnterPress}
-      />
-      <IconButton type='button' className='search-button' onClick={handleSearch}>
-        <SearchIcon/>
-      </IconButton>
-    </Paper>
+    <Tooltip title='Enter a valid FOAF turtle file URL' placement="bottom-start" disableHoverListener>
+      <Paper component='form' className='search-bar-container'>
+        <InputBase
+          className='search-input'
+          placeholder='Search...'
+          value={inputValue}
+          onChange={handleInputChange}
+          onKeyDown={handleEnterPress}
+        />
+        <IconButton type='button' className='search-button' onClick={handleSearch}>
+          <SearchIcon/>
+        </IconButton>
+      </Paper>
+    </Tooltip>
   );
 }
 

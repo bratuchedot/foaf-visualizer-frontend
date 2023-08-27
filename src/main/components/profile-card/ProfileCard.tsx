@@ -31,7 +31,7 @@ function ProfileCard({ data }: { data: Foaf | null }) {
               spacing={2}
             >
               <Avatar className='profile-picture' alt={data?.name} src={data?.pictureUrl}/>
-              <Typography variant='h5'>{data?.name}</Typography>
+              <Typography variant='h5'><strong>{data?.name}</strong></Typography>
               <Button>{data?.peopleYouKnow.length} friends</Button>
             </Stack>
           </Grid>
