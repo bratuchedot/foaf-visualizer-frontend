@@ -34,6 +34,12 @@ This guide will walk you through the process of downloading **FOAF Visualizer** 
     ```
     This command will compile the project and start the development server. Look for the URL (http://localhost:5173) where you can access your project in a web browser.
     **Note:** Before accessing the project in a web browser make sure you have up and running the backend.
+
+### Valid FOAF file URL for testing
+Enter the following URL into the search bar of the application.
+```sh
+    https://raw.githubusercontent.com/bratuchedot/foaf/master/foaf.ttl
+```
     
 ## Additional Resources
 
