@@ -1,27 +1,44 @@
-# React + TypeScript + Vite
+# FOAF Visualizer
+## Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This guide will walk you through the process of downloading **FOAF Visualizer** from GitHub and getting it up and running on your local machine.
 
-Currently, two official plugins are available:
+## Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Git
+- Node.js (v14 or later)
+- npm (Node Package Manager) or yarn
 
-## Expanding the ESLint configuration
+## Step 1: Cloning the Repository
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. **Open Terminal:** Launch your terminal or command prompt.
+2. **Choose Directory:** Navigate to the directory where you want to clone the project. Use the `cd` command to move to the desired directory.
+3. **Clone the Repository:** Run the following command to clone the repository from GitHub:
+    ```sh
+    git clone https://github.com/bratuchedot/foaf-visualizer-frontend.git
+    ```
+4. **Navigate to Project Directory:** Move into the newly cloned project directory:
+    ```sh
+    cd foaf-visualizer-frontend
+    ```
 
-- Configure the top-level `parserOptions` property like this:
+## Step 2: Project Configuration
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+1. **Install Dependencies:** Inside the project directory, install the project dependencies using the following command:
+    ```sh
+    npm install
+    ```
+2. **Start Development Server:** To start the development server, run the following command:
+    ```sh
+    npm run dev
+    ```
+    This command will compile the project and start the development server. Look for the URL (http://localhost:5173) where you can access your project in a web browser.
+    **Note:** Before accessing the project in a web browser make sure you have up and running the backend.
+    
+## Additional Resources
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- [Vite Documentation](https://vitejs.dev/)
+- [React Documentation](https://react.dev/)
+- [Git Documentation](https://git-scm.com/doc)
+
+**Crafted with ♥ by Emilijan Koteski, August 2023**
