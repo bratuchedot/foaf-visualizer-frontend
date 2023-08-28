@@ -1,0 +1,16 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 118px);
+}
+
+.content-container {
+  text-align: center;
+  margin-bottom: 10rem;
+}
+
+.foaf {
+  font-size: 8rem;
+  font-weight: 500 !important;
+}
