@@ -21,7 +21,6 @@ function CardSlider({ data }: { data: Friend[] | undefined }) {
           }
         }}
         spaceBetween={16}
-        loop={true}
         pagination={{
           clickable: true
         }}
