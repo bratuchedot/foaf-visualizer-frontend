@@ -1,5 +1,8 @@
-.toolbar {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+#header {
+
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

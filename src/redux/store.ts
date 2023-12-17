@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import profileReducer from './profile/profileSlice';
+import foafReducer from './foaf/foafSlice.ts';
 import snackbarReducer from './snackbar/snackbarSlice';
 
 export const store = configureStore({
   reducer: {
-    profile: profileReducer,
+    foaf: foafReducer,
     snackbar: snackbarReducer
   }
 });

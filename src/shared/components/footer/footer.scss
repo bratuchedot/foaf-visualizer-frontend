@@ -1,5 +1,9 @@
-.footer-text {
-  text-align: center;
-  margin: 1rem 0 !important;
-  opacity: 0.7;
+#footer {
+  margin-top: 2rem;
+
+  .footer-text {
+    text-align: center;
+    margin: 1rem 0;
+    opacity: 0.7;
+  }
 }
