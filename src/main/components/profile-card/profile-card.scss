@@ -1,10 +1,14 @@
-.container {
-  max-width: 1200px;
-  padding: 16px;
-}
+#profile-card-container {
+  padding: 2rem;
 
-.profile-picture {
-  width: 250px !important;
-  height: 250px !important;
-  font-size: 120px !important;
+  .profile-picture {
+    width: 250px;
+    height: 250px;
+    font-size: 160px;
+  }
+
+  .card-divider {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
 }

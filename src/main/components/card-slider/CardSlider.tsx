@@ -4,10 +4,10 @@ import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 import './card-slider.scss';
+import { KnowsDetails } from '../../../shared/interfaces/KnowsDetails.ts';
 import SlideCard from '../slide-card/SlideCard.tsx';
-import { Friend } from '../../../shared/interfaces/Friend.ts';
 
-function CardSlider({ data }: { data: Friend[] | undefined }) {
+function CardSlider({ data }: { data: KnowsDetails[] | undefined }) {
   return (
     <section>
       <Swiper

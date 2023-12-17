@@ -1,18 +1,23 @@
-.about-container {
-  padding: 2rem;
-}
+#about-page {
+  min-height: calc(100vh - 149px);
 
-.heading {
-  &:first-child {
-    margin-top: 0 !important;
+  .about-container {
+    padding: 2rem;
   }
-  margin-top: 2rem !important;
-}
 
-.text {
-  margin-top: 1rem !important;
-}
+  .heading {
+    margin-top: 2rem;
 
-.back-button {
-  margin: 1rem 0 !important;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .text {
+    margin-top: 1rem;
+  }
+
+  .back-button {
+    margin: 1rem 0;
+  }
 }

@@ -1,14 +1,11 @@
-import { CircularProgress } from '@mui/material';
-import './loader.scss';
+import { Backdrop, CircularProgress } from '@mui/material';
 
 function Loader({ isLoading = false }: { isLoading: boolean }) {
   return (
-    <>
-      {isLoading &&
-        <div className='loader'>
-          <CircularProgress size={100}/>
-        </div>}
-    </>
+    isLoading &&
+    <Backdrop sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }} open={isLoading}>
+      <CircularProgress size={100}/>
+    </Backdrop>
   );
 }
 

@@ -9,9 +9,9 @@ function HomePage() {
   return (
     <>
       <Header/>
-      <main className='main-container'>
-        <Container className='content-container' maxWidth='md'>
-          <Typography variant='h1' color='primary' className='foaf'>FOAF Visualizer</Typography>
+      <main id='home-page'>
+        <Container component='div' className='content-container' maxWidth='md'>
+          <Typography variant='h1' color='primary' fontWeight='500'>FOAF Visualizer</Typography>
           <SearchBar/>
         </Container>
       </main>
